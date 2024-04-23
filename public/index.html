@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readability Checker</title>
+    <style>
+        /* 简单的样式，增加按钮禁用时的表现 */
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>检查网页是否支持 Readability</h1>
+    <input type="text" id="urlInput" placeholder="输入网站链接">
+    <button id="checkButton">检查</button>
+
+    <div id="resultModal" style="display:none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);">
+        <div style="background: white; margin: 100px auto; padding: 20px; width: 50%; max-height: 80vh; overflow: auto; position: relative;">
+            <h2 id="modalTitle">Readability 结果</h2>
+            <p id="modalContent" style="max-height: 70vh; overflow-y: auto;">Here goes the content...</p>
+            <button onclick="closeModal()" style="position: absolute; bottom: 10px; right: 20px;">关闭</button>
+            <button id="openReadabilityButton" style="display: none;">展示 Readability</button>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
